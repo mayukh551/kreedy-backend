@@ -26,6 +26,10 @@ async function ConnectToDB() {
 
 ConnectToDB();
 
+app.get('/', (req, res) => {
+  res.send('Server is Live!');
+})
+
 // Routes
 app.post('/api/register', registerUser);
 app.post('/api/login', loginUser);
